@@ -1,0 +1,41 @@
+<h1 class="bg-primary">Assalaam u alaikum {{ title }}</h1>
+
+<!-- <app-tasks></app-tasks> -->
+
+<h4>List of completed tasks</h4>
+<!-- <app-completed-tasks></app-completed-tasks> -->
+
+<button (click)="readMe()">Click Me!</button>
+
+<div *ngIf="showMsg" [ngStyle]='{color:"red"}'>Show this message from IF true statement</div>
+<div *ngIf="showMsg" [ngStyle]='{color:colorName}'>Show this message from IF true statement</div>
+
+<h4> ngFor Example</h4>
+<table class="table">
+    <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Index</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Even</th>
+        <th>Odd</th>
+    </tr>
+    <tr *ngFor="let user of users; index as i; first as f; last as l; even as e; odd as o ">
+        <td>{{user.userId}}</td>
+        <td>{{user.name}}</td>
+        <td>{{i}}</td>
+        <td>{{f}}</td>
+        <td>{{l}}</td>
+        <td>{{e}}</td>
+        <td>{{o}}</td>
+    </tr>
+</table>
+<div>--------------------------</div>
+<div>ngStyle & ngClass Examples</div>
+<div [ngStyle]="{'color': 'red'}">Learning Angular ngStyle using straight color value is fun!</div>
+<div [ngStyle]="{'color': colorName}">Learning Angular ngStyle using color variable is fun!</div>
+<div [ngClass]="{'one': true, 'two':false}">ngClass example using app.component.css classes - one and two</div>
+<app-event-binding></app-event-binding>
+<app-attribute-binding></app-attribute-binding>
+<router-outlet></router-outlet>
