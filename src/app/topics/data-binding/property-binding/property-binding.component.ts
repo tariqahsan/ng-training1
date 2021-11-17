@@ -12,4 +12,6 @@ export class PropertyBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Setting color
+  colorVal='red';
 }
